@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Your Name</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Your Name</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="portfolio-list">
+            <h1>My Portfolio</h1>
+            <p>A selection of projects demonstrating my skills in embedded systems, firmware, and IoT.</p>
+
+            <div class="project-entry" id="project1">
+                <img src="https://via.placeholder.com/800x600" alt="Smart Irrigation System">
+                <div class="project-content">
+                    <h2>Smart Irrigation System</h2>
+                    <p class="problem"><strong>Problem:</strong> Develop a low-power, automated irrigation system that can be controlled remotely via a mobile app and optimize water usage based on soil moisture data.</p>
+                    <p class="role"><strong>My Role:</strong> I was responsible for the full-stack embedded development. I designed the custom PCB, developed the **bare-metal firmware** for the STM32 microcontroller to manage moisture sensors and solenoid valves, and implemented the Wi-Fi connectivity stack to integrate with a cloud-based dashboard.</p>
+                    <p class="tech"><strong>Technologies Used:</strong> STM32, C++, FreeRTOS, ESP8266 (Wi-Fi), MQTT, KiCad.</p>
+                    <p class="outcome"><strong>Outcome:</strong> The final product was a reliable, energy-efficient device that reduced water consumption by over 30% for a pilot program. The system is scalable and provides real-time data to end-users.</p>
+                    <a href="https://github.com/your-github/project-repo" target="_blank" class="github-link">View on GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-entry" id="project2">
+                <img src="https://via.placeholder.com/800x600" alt="Industrial Sensor Network">
+                <div class="project-content">
+                    <h2>Industrial Sensor Network</h2>
+                    <p class="problem"><strong>Problem:</strong> Create a robust and secure wireless sensor network for a factory environment to monitor temperature, humidity, and vibration on critical machinery.</p>
+                    <p class="role"><strong>My Role:</strong> I designed the communication protocol and developed the firmware for a network of battery-powered **ESP32 nodes**. I implemented a secure **LoRaWAN** stack for long-range data transmission and configured the gateway to securely forward data to a central server.</p>
+                    <p class="tech"><strong>Technologies Used:</strong> ESP32, C, LoRaWAN, AWS IoT Core, custom protocol design.</p>
+                    <p class="outcome"><strong>Outcome:</strong> The system successfully deployed and is now used to provide real-time condition monitoring, helping to predict and prevent equipment failures, saving the client significant maintenance costs.</p>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
