@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Aryansh Rajora</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Aryansh Rajora</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="portfolio-list">
+            <h1>My Portfolio</h1>
+            <p>A selection of projects demonstrating my skills in embedded systems, firmware, and IoT.</p>
+
+            <div class="project-entry" id="project1">
+                <img src="https://rajora-in.github.io/rajora.in-v2.0/Images/AQI_Image/1.0.png"
+                    alt="ONLINE AIR QUALITY MONITORING SYSTEM">
+                <div class="project-content">
+                    <h2>ONLINE AIR QUALITY MONITORING SYSTEM</h2>
+                    <p class="problem"><strong>Problem:</strong> Develop a low-power, automated system that can be
+                        monitor remotely via a Web app and showws real time Data.</p>
+                    <p class="role"><strong>My Role:</strong> I was responsible for the full-stack embedded development.
+                        I designed the custom PCB, developed the **bare-metal firmware** for the ESP32 microcontroller
+                        to manage sensors and Display, and implemented the Wi-Fi/SIM connectivity stack to integrate
+                        with a cloud-based dashboard.</p>
+                    <p class="tech"><strong>Technologies Used:</strong> ESP32, C++, Arduino IDE, MQTT, TCP/IP, Altium
+                        25, SIM-Module, Ambient Air Quality Sensor, Display(20x4/128x64/Nextion/DWIN).</p>
+                    <p class="outcome"><strong>Outcome:</strong> The final product was a reliable, energy-efficient
+                        device that Monitor Air Quality in Real Time. The system is scalable and provides real-time data
+                        to end-users.</p>
+                    <!--
+                    <a href="https://github.com/Aryanshrajora" target="_blank" class="github-link">View on GitHub</a>
+                    -->
+                </div>
+            </div>
+
+            <div class="project-entry" id="project2">
+                <img src="https://rajora-in.github.io/rajora.in-v2.0/Images/LED-Display/1.jpeg"
+                    alt="LED Board with live Data">
+                <div class="project-content">
+                    <h2>LED Board with live Data</h2>
+                    <p class="problem"><strong>Problem:</strong> Create A Custum user interface(UI) On
+                        LED RGB MATRIX Screen Which Shows Real Time Data From Live Servers</Output></p>
+                    <p class="role"><strong>My Role:</strong> I single-handedly engineered a cutting-edge system,
+                        featuring a custom-designed PCB and a fleet of ESP32 , to drive a dynamic RGB LED matrix
+                        display. By meticulously implementing a high-speed SPI protocol, I enabled the seamless,
+                        real-time visualization of critical data streams, revolutionizing how clients monitor key
+                        metrics.</p>
+                    <p class="tech"><strong>Technologies Used:</strong> ESP32, C++, P10 RGB MATRIX DISPLAY, Arduino
+                        IDE, ESP8266, SPI, RS-485</p>
+                    <p class="outcome"><strong>Outcome:</strong> We've deployed a dynamic system that projects real-time
+                        data onto an RGB matrix display. This isn't just a dashboard; it's a living visual tool that
+                        helps our client proactively predict and prevent equipment failures, resulting in significant
+                        reductions in maintenance costs.</p>
+                    <!--
+                    <a href="https://github.com/Aryanshrajora" target="_blank" class="github-link">View on GitHub</a>
+                    -->
+                </div>
+            </div>
+
+            <div class="project-entry" id="project3">
+                <img src="https://rajora-in.github.io/rajora.in-v2.0/Images/AQI_Image/5.jpg"
+                    alt="Diesel Generator Monitoring System via HMI">
+                <div class="project-content">
+                    <h2>Diesel Generator Monitoring System via HMI</h2>
+                    <p class="problem"><strong>Problem:</strong> Create A Custum Graphical user interface(GUI) On
+                        Human-Machine Interface(HMI) Touch Screen to measure Real Time Voltage Output From Diesel
+                        Generator</Output></p>
+                    <p class="role"><strong>My Role:</strong> I designed the communication protocol(RS-485) and
+                        developed the
+                        firmware for a System **ESP32 nodes**. I implemented a **Selec Instrument**
+                        stack for High Voltage data and Multiple Temprature Of diesel generator and Shown on the Screen
+                    </p>
+                    <p class="tech"><strong>Technologies Used:</strong> ESP32, C++, Selec Voltage Intrument, Arduino
+                        IDE, RTD, MAX6675, RS-485, NEXTION Editor(for custom GUI), Nextion 7" HMI</p>
+                    <p class="outcome"><strong>Outcome:</strong> The system successfully deployed and is now used to
+                        provide real-time condition monitoring(i.e. Output Voltage, Fuel Temprature, Engine Temprature
+                        Etc), helping to predict and prevent equipment failures,
+                        saving the client significant maintenance costs.</p>
+                    <!--
+                    <a href="https://github.com/Aryanshrajora" target="_blank" class="github-link">View on GitHub</a>
+                    -->
+                </div>
+            </div>
+
+            <div class="project-entry" id="project4">
+                <img src="https://rajora-in.github.io/rajora.in-v2.0/Images/Website Image/P2.png"
+                    alt="Industrial Sensor Network">
+                <div class="project-content">
+                    <h2>Industrial Sensor Network</h2>
+                    <p class="problem"><strong>Problem:</strong> Create a robust and secure wireless sensor network for
+                        a factory environment to monitor temperature, humidity, and vibration on critical machinery.</p>
+                    <p class="role"><strong>My Role:</strong> I designed the communication protocol and developed the
+                        firmware for a network of battery-powered **ESP32 nodes**. I implemented a secure **LoRaWAN**
+                        stack for long-range data transmission and configured the gateway to securely forward data to a
+                        central server.</p>
+                    <p class="tech"><strong>Technologies Used:</strong> ESP32, C, LoRaWAN, AWS IoT Core, custom protocol
+                        design.</p>
+                    <p class="outcome"><strong>Outcome:</strong> The system successfully deployed and is now used to
+                        provide real-time condition monitoring, helping to predict and prevent equipment failures,
+                        saving the client significant maintenance costs.</p>
+                    <!--
+                    <a href="https://github.com/Aryanshrajora" target="_blank" class="github-link">View on GitHub</a>
+                    -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p> Ready to start your project? Get your free consultation today! Call or text me at +91-9990977973.</p>
+    </footer>
+
+</body>
+
+</html>
