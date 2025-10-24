@@ -8,17 +8,28 @@ body {
     color: #e0e0e0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #e0e0e0;
     font-weight: 700;
 }
 
-h1 { font-size: 2.5em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.5em; }
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
 
 a {
-    color: #4CAF50; /* A vibrant green accent color */
+    color: #4CAF50;
+    /* A vibrant green accent color */
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -62,7 +73,8 @@ nav ul li {
 }
 
 main {
-    padding-top: 6em; /* To account for the fixed header */
+    padding-top: 6em;
+    /* To account for the fixed header */
 }
 
 section {
@@ -129,26 +141,30 @@ footer {
     margin: 0 auto 2em;
 }
 
-#services-preview, #featured-projects {
+#services-preview,
+#featured-projects {
     text-align: center;
 }
 
-.services-grid, .projects-grid {
+.services-grid,
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2em;
     margin-top: 2em;
 }
 
-.service-item, .project-card {
+.service-item,
+.project-card {
     background: #1e1e1e;
     padding: 2em;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
-.service-item:hover, .project-card:hover {
+.service-item:hover,
+.project-card:hover {
     transform: translateY(-5px);
 }
 
@@ -253,7 +269,8 @@ footer {
     font-weight: 700;
 }
 
-#contact-form input, #contact-form textarea {
+#contact-form input,
+#contact-form textarea {
     width: 100%;
     padding: 0.8em;
     margin-top: 0.5em;
@@ -279,6 +296,7 @@ footer {
 
 /* --- Responsive Design for Smaller Screens --- */
 @media (max-width: 768px) {
+
     /* General adjustments */
     body {
         font-size: 14px;
@@ -288,7 +306,7 @@ footer {
         padding: 0.8em 2%;
         width: 96%;
     }
-    
+
     main {
         padding-top: 5em;
     }
@@ -299,27 +317,37 @@ footer {
 
     /* Navigation */
     nav {
-        flex-direction: row; /* Keep it horizontal */
-        flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
-        justify-content: center; /* Center items when they wrap */
+        flex-direction: row;
+        /* Keep it horizontal */
+        flex-wrap: wrap;
+        /* Allow items to wrap to the next line if needed */
+        justify-content: center;
+        /* Center items when they wrap */
     }
 
     nav .logo {
-        margin-bottom: 0.5em; /* Small margin to separate from the links if it wraps */
-        margin-right: 1em; /* Add some space between logo and links on a single line */
+        margin-bottom: 0.5em;
+        /* Small margin to separate from the links if it wraps */
+        margin-right: 1em;
+        /* Add some space between logo and links on a single line */
     }
 
     nav ul {
-        flex-direction: row; /* Keep list items horizontal */
-        flex-wrap: wrap; /* Allow the list items to wrap */
+        flex-direction: row;
+        /* Keep list items horizontal */
+        flex-wrap: wrap;
+        /* Allow the list items to wrap */
         align-items: center;
         justify-content: center;
-        width: 100%; /* Ensure the list takes full width to wrap correctly */
-        margin-top: 0.5em; /* Add a little space from the logo if it wraps */
+        width: 100%;
+        /* Ensure the list takes full width to wrap correctly */
+        margin-top: 0.5em;
+        /* Add a little space from the logo if it wraps */
     }
 
     nav ul li {
-        margin: 0.5em 0.5em; /* Adjust margins for better spacing on mobile */
+        margin: 0.5em 0.5em;
+        /* Adjust margins for better spacing on mobile */
     }
 
     /* Hero Section */
@@ -329,23 +357,27 @@ footer {
         padding: 2em 0;
     }
 
-    .hero-content, .hero-image {
-        flex: none; /* Reset flex-grow */
+    .hero-content,
+    .hero-image {
+        flex: none;
+        /* Reset flex-grow */
         width: 100%;
         padding-right: 0;
     }
 
     .hero-image {
         margin-top: 2em;
-        text-align: center; /* Center the image on mobile */
+        text-align: center;
+        /* Center the image on mobile */
     }
-    
+
     #hero h1 {
         font-size: 2em;
     }
 
     /* Grids */
-    .services-grid, .projects-grid {
+    .services-grid,
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 
@@ -357,19 +389,19 @@ footer {
     }
 
     .project-entry:nth-child(even) {
-        flex-direction: column; /* Override the row-reverse for mobile */
+        flex-direction: column;
+        /* Override the row-reverse for mobile */
     }
 
     .project-entry img,
     .project-entry .project-content {
         width: 100%;
     }
-    
+
     .project-entry img {
         margin-bottom: 1em;
     }
 
-    /* About Page Profile Card */
     .profile-card {
         flex-direction: column;
         align-items: center;
@@ -382,6 +414,18 @@ footer {
     }
 
     .profile-text {
-        text-align: center;
+        text-align: left;
+        /* Change from center to left */
+    }
+
+    /* Ensure headings and list items within the profile text are also left-aligned */
+    .profile-text h3 {
+        text-align: left;
+    }
+
+    .profile-text ul {
+        text-align: left;
+        /* You might want to add this to ensure the list itself aligns left too */
+        padding-left: 20px;
     }
 }
