@@ -43,8 +43,10 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
 
-                <button type="submit" class="cta-button">Send Message</button>
+                <button type="submit" id="submit-button" class="cta-button">Send Message</button>
             </form>
+            
+            <p id="form-status" style="margin-top: 15px; font-weight: bold;"></p>
 
             <div class="contact-info">
                 <h3>Direct Contact</h3>
@@ -64,11 +66,18 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxPV5cATzAoiB9bh2FsCBAXDK9TaNrqUb1tzH-Za8FXTcroESoFqdHOVtTwOvNpU6-z/exec'; // Replace with your actual deployed URL
         const form = document.getElementById('contact-form');
+        const submitButton = document.getElementById('submit-button');
+        const formStatus = document.getElementById('form-status');
 
         form.addEventListener('submit', e => {
             e.preventDefault();
             
-            // This line creates a FormData object from your form, which correctly packages the data.
+            // 1. Show "Sending..." state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            formStatus.textContent = 'Sending your message...';
+            formStatus.style.color = '#3498db'; // A nice blue for in-progress
+
             const formData = new FormData(form);
 
             fetch(scriptURL, { 
@@ -76,10 +85,31 @@
                 body: formData
             })
             .then(response => {
-                alert('Success! Your message has been sent.');
-                form.reset(); // Clear the form fields
+                // 2. Handle Success
+                if (response.ok) {
+                    formStatus.textContent = '✅ Success! Your message has been sent.';
+                    formStatus.style.color = '#27ae60'; // Green for success
+                    form.reset(); // Clear the form fields
+                } else {
+                    // Handle non-200 responses if the Google Script returns one
+                    throw new Error('Form submission failed on the server.');
+                }
             })
-            .catch(error => console.error('Error!', error.message));
+            .catch(error => {
+                // 3. Handle Error
+                console.error('Error!', error.message);
+                formStatus.textContent = '❌ Error! Could not send message. Please try again later or use the direct contact methods.';
+                formStatus.style.color = '#e74c3c'; // Red for error
+                // You can still choose to clear the form or not on error
+            })
+            .finally(() => {
+                // 4. Reset Button State after a short delay for user to read success/error
+                setTimeout(() => {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Send Message';
+                    // Optional: Clear status message after a longer delay, or leave it.
+                }, 2000); 
+            });
         });
     </script>
 
